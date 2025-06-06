@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DnD Player Sheets</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>DnD Player Sheets</h1>
+
+    <section>
+      <h2>Character Info</h2>
+      <input id="charName" placeholder="Name" />
+      <input id="charClass" placeholder="Class" />
+      <input id="charLevel" placeholder="Level" type="number" />
+      <input id="charRace" placeholder="Race" />
+    </section>
+
+    <section>
+      <h2>Health</h2>
+      <input id="currentHP" placeholder="Current HP" type="number" />
+      <input id="maxHP" placeholder="Max HP" type="number" />
+    </section>
+
+    <section>
+      <h2>Ability Scores</h2>
+      <div class="ability-grid">
+        <input id="str" placeholder="STR" type="number" />
+        <input id="dex" placeholder="DEX" type="number" />
+        <input id="con" placeholder="CON" type="number" />
+        <input id="int" placeholder="INT" type="number" />
+        <input id="wis" placeholder="WIS" type="number" />
+        <input id="cha" placeholder="CHA" type="number" />
+      </div>
+    </section>
+
+    <section>
+      <h2>Inventory</h2>
+      <textarea id="inventory" rows="5" placeholder="List your items here..."></textarea>
+    </section>
+
+    <section>
+      <h2>Spells</h2>
+      <textarea id="spells" rows="5" placeholder="List your spells here..."></textarea>
+    </section>
+
+    <div class="buttons">
+      <button onclick="saveData()">Save</button>
+      <button onclick="clearData()">Clear</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
