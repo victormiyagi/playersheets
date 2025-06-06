@@ -7,11 +7,11 @@ body {
 
 .container {
   position: relative;
-  width: 1000px;
-  height: 1294px;
+  width: 1100px;
+  height: 1420px;
   margin: 20px auto;
   background: url('character_sheet_page1.png') no-repeat center top;
-  background-size: cover;
+  background-size: contain;
   box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
 
@@ -21,43 +21,49 @@ input.sheet-field {
   border: 1px solid #888;
   padding: 3px;
   font-size: 14px;
-  width: 180px;
+  width: 200px;
 }
 
 #charName {
-  top: 85px;
-  left: 80px;
-  width: 300px;
+  top: 78px;
+  left: 115px;
+  width: 350px;
 }
 
 #charClassLevel {
-  top: 115px;
-  left: 80px;
+  top: 125px;
+  left: 112px;
+  width: 230px;
 }
 
 #charBackground {
-  top: 115px;
-  left: 380px;
+  top: 125px;
+  left: 385px;
+  width: 210px;
 }
 
 #playerName {
-  top: 115px;
-  left: 675px;
+  top: 125px;
+  left: 615px;
+  width: 210px;
 }
 
 #charRace {
-  top: 145px;
-  left: 80px;
+  top: 155px;
+  left: 112px;
+  width: 230px;
 }
 
 #charAlignment {
-  top: 145px;
-  left: 380px;
+  top: 155px;
+  left: 385px;
+  width: 210px;
 }
 
 #charXP {
-  top: 145px;
-  left: 675px;
+  top: 155px;
+  left: 615px;
+  width: 210px;
 }
 
 button.save-btn {
