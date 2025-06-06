@@ -8,46 +8,45 @@
 </head>
 <body>
   <div class="container">
-    <h1>DnD Player Sheets</h1>
+    <input id="charName" class="sheet-field" placeholder="Character Name" />
+    <input id="charClassLevel" class="sheet-field" placeholder="Class & Level" />
+    <input id="charBackground" class="sheet-field" placeholder="Background" />
+    <input id="playerName" class="sheet-field" placeholder="Player Name" />
+    <input id="charRace" class="sheet-field" placeholder="Race" />
+    <input id="charAlignment" class="sheet-field" placeholder="Alignment" />
+    <input id="charXP" class="sheet-field" placeholder="XP" />
 
-    <section class="character-overview">
-      <div class="field-row">
-        <label>Character Name</label>
-        <input id="charName" />
-      </div>
-
-      <div class="field-row">
-        <div class="field">
-          <label>Class & Level</label>
-          <input id="charClassLevel" />
-        </div>
-        <div class="field">
-          <label>Background</label>
-          <input id="charBackground" />
-        </div>
-        <div class="field">
-          <label>Player Name</label>
-          <input id="playerName" />
-        </div>
-      </div>
-
-      <div class="field-row">
-        <div class="field">
-          <label>Race</label>
-          <input id="charRace" />
-        </div>
-        <div class="field">
-          <label>Alignment</label>
-          <input id="charAlignment" />
-        </div>
-        <div class="field">
-          <label>Experience Points</label>
-          <input id="charXP" />
-        </div>
-      </div>
-    </section>
+    <button class="save-btn" onclick="saveData()">Save</button>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    // Load saved data on page load
+    window.onload = () => {
+      const data = JSON.parse(localStorage.getItem("dndCharacter"));
+      if (data) {
+        document.getElementById("charName").value = data.charName || "";
+        document.getElementById("charClassLevel").value = data.charClassLevel || "";
+        document.getElementById("charBackground").value = data.charBackground || "";
+        document.getElementById("playerName").value = data.playerName || "";
+        document.getElementById("charRace").value = data.charRace || "";
+        document.getElementById("charAlignment").value = data.charAlignment || "";
+        document.getElementById("charXP").value = data.charXP || "";
+      }
+    };
+
+    function saveData() {
+      const data = {
+        charName: document.getElementById("charName").value,
+        charClassLevel: document.getElementById("charClassLevel").value,
+        charBackground: document.getElementById("charBackground").value,
+        playerName: document.getElementById("playerName").value,
+        charRace: document.getElementById("charRace").value,
+        charAlignment: document.getElementById("charAlignment").value,
+        charXP: document.getElementById("charXP").value
+      };
+      localStorage.setItem("dndCharacter", JSON.stringify(data));
+      alert("Character data saved!");
+    }
+  </script>
 </body>
 </html>
