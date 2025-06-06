@@ -10,46 +10,42 @@
   <div class="container">
     <h1>DnD Player Sheets</h1>
 
-    <section>
-      <h2>Character Info</h2>
-      <input id="charName" placeholder="Name" />
-      <input id="charClass" placeholder="Class" />
-      <input id="charLevel" placeholder="Level" type="number" />
-      <input id="charRace" placeholder="Race" />
-    </section>
+    <section class="character-overview">
+      <div class="field-row">
+        <label>Character Name</label>
+        <input id="charName" />
+      </div>
 
-    <section>
-      <h2>Health</h2>
-      <input id="currentHP" placeholder="Current HP" type="number" />
-      <input id="maxHP" placeholder="Max HP" type="number" />
-    </section>
+      <div class="field-row">
+        <div class="field">
+          <label>Class & Level</label>
+          <input id="charClassLevel" />
+        </div>
+        <div class="field">
+          <label>Background</label>
+          <input id="charBackground" />
+        </div>
+        <div class="field">
+          <label>Player Name</label>
+          <input id="playerName" />
+        </div>
+      </div>
 
-    <section>
-      <h2>Ability Scores</h2>
-      <div class="ability-grid">
-        <input id="str" placeholder="STR" type="number" />
-        <input id="dex" placeholder="DEX" type="number" />
-        <input id="con" placeholder="CON" type="number" />
-        <input id="int" placeholder="INT" type="number" />
-        <input id="wis" placeholder="WIS" type="number" />
-        <input id="cha" placeholder="CHA" type="number" />
+      <div class="field-row">
+        <div class="field">
+          <label>Race</label>
+          <input id="charRace" />
+        </div>
+        <div class="field">
+          <label>Alignment</label>
+          <input id="charAlignment" />
+        </div>
+        <div class="field">
+          <label>Experience Points</label>
+          <input id="charXP" />
+        </div>
       </div>
     </section>
-
-    <section>
-      <h2>Inventory</h2>
-      <textarea id="inventory" rows="5" placeholder="List your items here..."></textarea>
-    </section>
-
-    <section>
-      <h2>Spells</h2>
-      <textarea id="spells" rows="5" placeholder="List your spells here..."></textarea>
-    </section>
-
-    <div class="buttons">
-      <button onclick="saveData()">Save</button>
-      <button onclick="clearData()">Clear</button>
-    </div>
   </div>
 
   <script src="script.js"></script>
